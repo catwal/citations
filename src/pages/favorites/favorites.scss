@@ -1,0 +1,8 @@
+page-favorites {
+    /* alternative à la méthode
+    proposé un ngClass gui appel la couleur alternative
+    en appelant directement le variable.scss $colors */
+.alt{
+    background-color: color($colors, altQuoteBackground);
+}
+}

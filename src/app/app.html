@@ -1,1 +1,23 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<!-- pour mettre une sidebar il faut la mettre dans la app.html -->
+<ion-menu [content]="nav">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>Menu</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <button ion-item item-left (click)="onLoad(tabsPage)">
+                <ion-icon name="quote"></ion-icon>
+                Quotes
+            </button>
+            <button ion-item item-left (click)="onLoad(settingsPage)">
+                <ion-icon name="settings"></ion-icon>
+                Settings
+            </button>
+        </ion-list>
+    </ion-content>
+</ion-menu> 
+
+<!-- on definit la rootPage et on va la databinder dans ion-menu -->
+<ion-nav [root]="tabsPage" #nav></ion-nav>
